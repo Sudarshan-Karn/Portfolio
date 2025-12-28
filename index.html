@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudarshan Karn - Business Analyst & Automation Solutions Developer</title>
+    <title>Sudarshan Karn - Business Analyst & Automation Solutions</title>
     <style>
         * {
             margin: 0;
@@ -12,21 +12,24 @@
         }
 
         :root {
-            --primary-color: #0066cc;
-            --secondary-color: #00d4ff;
-            --accent-color: #ff6b6b;
-            --dark-bg: #0a0e27;
-            --card-bg: #1a1f3a;
-            --text-light: #e0e0e0;
-            --text-dark: #1a1f3a;
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --accent: #059669;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #16213e 100%);
-            color: var(--text-light);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--gray-800);
             line-height: 1.6;
-            overflow-x: hidden;
+            background: #ffffff;
         }
 
         /* Navigation */
@@ -34,10 +37,9 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(10, 14, 39, 0.95);
-            backdrop-filter: blur(10px);
+            background: #ffffff;
+            border-bottom: 1px solid var(--gray-200);
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
         }
 
         nav .container {
@@ -51,27 +53,26 @@
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #00d4ff, #0066cc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 700;
+            color: var(--primary);
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         nav a {
-            color: var(--text-light);
+            color: var(--gray-600);
             text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--secondary-color);
+            color: var(--primary);
         }
 
         .container {
@@ -82,48 +83,45 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
             text-align: center;
-            padding: 4rem 2rem;
         }
 
-        .hero-content h1 {
+        .hero h1 {
             font-size: 3.5rem;
+            color: var(--gray-900);
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #00d4ff, #0066cc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 800;
         }
 
-        .hero-content .subtitle {
+        .hero .subtitle {
             font-size: 1.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
-        .hero-content p {
+        .hero p {
             font-size: 1.1rem;
+            color: var(--gray-600);
             max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #b0b0b0;
+            margin: 0 auto 2.5rem;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
-            margin-bottom: 4rem;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 0.75rem 2rem;
+            padding: 0.875rem 2rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
@@ -131,40 +129,47 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #0066cc, #00d4ff);
+            background: var(--primary);
             color: white;
+            border: 2px solid var(--primary);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 102, 204, 0.3);
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: var(--secondary-color);
-            border: 2px solid var(--secondary-color);
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
         .btn-secondary:hover {
-            background: var(--secondary-color);
-            color: var(--dark-bg);
+            background: var(--gray-50);
+            transform: translateY(-2px);
         }
 
         /* About Section */
         .about {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+            padding: 5rem 2rem;
         }
 
         .section-title {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
             text-align: center;
-            background: linear-gradient(135deg, #00d4ff, #0066cc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--gray-600);
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .about-grid {
@@ -174,71 +179,121 @@
             align-items: center;
         }
 
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .about-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
+            font-size: 1.75rem;
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
         .about-content p {
+            color: var(--gray-600);
             margin-bottom: 1.5rem;
-            color: #b0b0b0;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
-        .skills-grid {
+        .skills-list {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
-        .skill-item {
-            background: var(--card-bg);
+        .skill-category {
             padding: 1.5rem;
+            background: var(--gray-50);
             border-radius: 8px;
-            border-left: 4px solid var(--secondary-color);
-            transition: transform 0.3s;
+            border-left: 4px solid var(--primary);
         }
 
-        .skill-item:hover {
-            transform: translateX(10px);
+        .skill-category h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
-        .skill-item h4 {
-            color: var(--secondary-color);
+        .skill-category p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Statistics Section */
+        .stats {
+            padding: 4rem 2rem;
+            background: var(--gray-50);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
             margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--gray-600);
+            font-size: 1rem;
         }
 
         /* Solutions Section */
         .solutions {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
         }
 
         .solutions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
         .solution-card {
-            background: var(--card-bg);
+            background: white;
             padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
             transition: all 0.3s;
         }
 
         .solution-card:hover {
-            border-color: var(--secondary-color);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
         }
 
         .solution-card h3 {
-            color: var(--secondary-color);
+            color: var(--gray-900);
             margin-bottom: 1rem;
             font-size: 1.3rem;
+            font-weight: 700;
         }
 
         .solution-card ul {
@@ -248,130 +303,148 @@
 
         .solution-card li {
             padding: 0.5rem 0;
-            color: #b0b0b0;
+            color: var(--gray-600);
             padding-left: 1.5rem;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .solution-card li:before {
-            content: "▸";
+            content: "→";
             position: absolute;
             left: 0;
-            color: var(--secondary-color);
+            color: var(--primary);
+            font-weight: bold;
         }
 
         /* Projects Section */
         .projects {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .project-card {
-            background: var(--card-bg);
-            border-radius: 10px;
+            background: white;
+            border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--gray-200);
             transition: all 0.3s;
+            display: grid;
+            grid-template-columns: 300px 1fr;
         }
 
         .project-card:hover {
-            border-color: var(--secondary-color);
-            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .project-header {
-            background: linear-gradient(135deg, #0066cc, #00d4ff);
-            padding: 2rem;
-            color: white;
+        .project-image {
+            background: var(--gray-200);
+            min-height: 250px;
         }
 
-        .project-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-content {
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .project-label {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .project-content p {
-            color: #b0b0b0;
-            margin-bottom: 1rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 0.75rem;
         }
 
         .tech-tag {
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--secondary-color);
-            padding: 0.3rem 0.8rem;
+            background: var(--gray-100);
+            color: var(--gray-700);
+            padding: 0.4rem 0.85rem;
             border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid var(--secondary-color);
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat {
-            padding: 2rem;
-        }
-
-        .stat h3 {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat p {
-            color: #b0b0b0;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
 
         /* Contact Section */
         .contact {
-            padding: 6rem 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+            padding: 5rem 2rem;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .contact-form {
-            max-width: 600px;
-            margin: 2rem auto;
+            margin-top: 2rem;
             display: grid;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .form-group {
-            text-align: left;
+            display: flex;
+            flex-direction: column;
         }
 
         .form-group label {
-            display: block;
             margin-bottom: 0.5rem;
-            color: var(--secondary-color);
+            color: var(--gray-800);
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
         .form-group input,
         .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            background: var(--card-bg);
-            color: var(--text-light);
-            border-radius: 5px;
+            padding: 0.875rem;
+            border: 1px solid var(--gray-300);
+            background: white;
+            color: var(--gray-800);
+            border-radius: 6px;
             font-family: inherit;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
         .form-group textarea {
@@ -379,44 +452,63 @@
             min-height: 150px;
         }
 
+        .contact-form button {
+            align-self: flex-start;
+        }
+
         /* Footer */
         footer {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 2rem;
+            background: var(--gray-900);
+            color: white;
+            padding: 3rem 2rem;
             text-align: center;
-            border-top: 1px solid rgba(0, 212, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .social-links a {
-            color: var(--secondary-color);
+            color: white;
             text-decoration: none;
+            font-weight: 600;
             transition: color 0.3s;
         }
 
         .social-links a:hover {
-            color: var(--primary-color);
+            color: var(--primary);
+        }
+
+        footer p {
+            color: #d1d5db;
+            font-size: 0.95rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-content h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .about-grid {
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-grid,
+            .project-card {
                 grid-template-columns: 1fr;
             }
 
             nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
+                gap: 1.5rem;
             }
 
             .cta-buttons {
@@ -424,9 +516,29 @@
                 align-items: center;
             }
 
-            .stats {
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
         }
     </style>
 </head>
@@ -442,14 +554,14 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
+
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
+        <div class="container">
             <h1>Sudarshan Karn</h1>
             <p class="subtitle">Business Analyst & Automation Solutions Developer</p>
-            <p>Transforming business processes through intelligent automation and data-driven solutions</p>
+            <p>Transform your business processes through intelligent automation, data architecture, and strategic business analysis</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -457,58 +569,71 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Driving business transformation through automation and data insights</p>
             <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop" alt="Business Professional">
+                </div>
                 <div class="about-content">
-                    <h3>Business Automation Expert</h3>
-                    <p>With 4+ years of experience, I specialize in building enterprise automation solutions that transform complex business processes into efficient, scalable systems.</p>
-                    <p>I help organizations optimize their operations through intelligent automation, data architecture, and custom business solutions.</p>
-                    
-                    <div class="skills-grid">
-                        <div class="skill-item">
+                    <h3>Business Analyst & Full-Stack Automation Developer</h3>
+                    <p>With 4+ years of experience, I specialize in building enterprise automation solutions that streamline complex business processes. My expertise spans business process optimization, data architecture, and intelligent automation platforms.</p>
+                    <p>I help organizations reduce operational overhead, improve decision-making through data insights, and scale their operations efficiently.</p>
+                    <div class="skills-list">
+                        <div class="skill-category">
                             <h4>📊 Data Architecture</h4>
-                            <p>BigQuery, ETL Pipelines, Warehousing</p>
+                            <p>BigQuery, ETL Pipelines, Data Warehousing</p>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-category">
                             <h4>🤖 Business Automation</h4>
                             <p>Google Apps Script, Workflows, RPA</p>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-category">
                             <h4>💻 Full-Stack Development</h4>
                             <p>Next.js, React, Node.js, Python</p>
                         </div>
-                        <div class="skill-item">
-                            <h4>📈 C
-                        <h4>📈 CRM & BI Systems</h4>
+                        <div class="skill-category">
+                            <h4>📈 CRM & BI Systems</h4>
                             <p>Custom Dashboards, Analytics</p>
                         </div>
                     </div>
-                </div>
-                <div class="about-content">
-                    <h3>Key Achievements</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0; color: #b0b0b0;"><span style="color: #00d4ff;">✓</span> Built 15+ enterprise automation solutions</li>
-                        <li style="padding: 0.5rem 0; color: #b0b0b0;"><span style="color: #00d4ff;">✓</span> Reduced manual work by 80%+ hours/month</li>
-                        <li style="padding: 0.5rem 0; color: #b0b0b0;"><span style="color: #00d4ff;">✓</span> Data architecture handling 500K+ daily records</li>
-                        <li style="padding: 0.5rem 0; color: #b0b0b0;"><span style="color: #00d4ff;">✓</span> ETL pipelines processing 2M+ transactions/month</li>
-                        <li style="padding: 0.5rem 0; color: #b0b0b0;"><span style="color: #00d4ff;">✓</span> Custom CRM for 50+ internal users</li>
-                        <li style="padding: 0.5rem 0; color: #b0b0b0;"><span style="color: #00d4ff;">✓</span> Automated financial closure from 5 days to 1 day</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Automation Solutions Built</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">500K+</div>
+                    <div class="stat-label">Daily Records Processed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Monthly Transactions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">80%+</div>
+                    <div class="stat-label">Manual Work Reduction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="solutions" id="solutions">
         <div class="container">
             <h2 class="section-title">Solutions I Build</h2>
+            <p class="section-subtitle">Tailored automation and data solutions for enterprise challenges</p>
             <div class="solutions-grid">
                 <div class="solution-card">
-                    <h3>🤖 Business Process Automation</h3>
+                    <h3>Business Process Automation</h3>
                     <ul>
                         <li>Workflow automation using Google Apps Script</li>
                         <li>API integrations and webhooks</li>
@@ -518,7 +643,7 @@
                     </ul>
                 </div>
                 <div class="solution-card">
-                    <h3>📊 Data Architecture & ETL</h3>
+                    <h3>Data Architecture & ETL</h3>
                     <ul>
                         <li>ETL pipeline design & implementation</li>
                         <li>Data warehouse solutions</li>
@@ -528,7 +653,7 @@
                     </ul>
                 </div>
                 <div class="solution-card">
-                    <h3>💻 Full-Stack Solutions</h3>
+                    <h3>Full-Stack Solutions</h3>
                     <ul>
                         <li>Web application development</li>
                         <li>Custom business tools</li>
@@ -541,105 +666,94 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats" style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);">
-        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-            <div class="stat">
-                <h3>15+</h3>
-                <p>Automation Solutions Built</p>
-            </div>
-            <div class="stat">
-                <h3>500K+</h3>
-                <p>Daily Records Processed</p>
-            </div>
-            <div class="stat">
-                <h3>2M+</h3>
-                <p>Monthly Transactions</p>
-            </div>
-            <div class="stat">
-                <h3>80%+</h3>
-                <p>Manual Work Reduction</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Logistics Data Pipeline Architecture</h3>
-                    <p>Enterprise ETL Solution</p>
-                </div>
-                <div class="project-content">
-                    <p>End-to-end ETL solution processing 500K+ daily records from multiple carriers into BigQuery, enabling real-time analytics and business intelligence. Reduced data processing time by 70% and improved data accuracy to 99.8%.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">BigQuery</span>
-                        <span class="tech-tag">Google Apps Script</span>
-                        <span class="tech-tag">ETL</span>
-                        <span class="tech-tag">Data Architecture</span>
+            <p class="section-subtitle">Real-world solutions demonstrating business impact</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" alt="Logistics Pipeline">
+                    </div>
+                    <div class="project-content">
+                        <div>
+                            <p class="project-label">Enterprise ETL Solution</p>
+                            <h3>Logistics Data Pipeline Architecture</h3>
+                            <p>End-to-end ETL solution processing 500K+ daily records from multiple carriers into BigQuery. Reduced data processing time by 70% and improved data accuracy to 99.8%.</p>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Google Apps Script</span>
+                            <span class="tech-tag">ETL</span>
+                            <span class="tech-tag">Data Architecture</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Financial Automation System</h3>
-                    <p>Invoice Processing & Reconciliation</p>
-                </div>
-                <div class="project-content">
-                    <p>Google Apps Script-based system automating invoice processing, reconciliation, and reporting. Reduced manual overhead by 120 hours/month and improved financial close time from 5 days to 1 day.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Google Apps Script</span>
-                        <span class="tech-tag">Google Sheets</span>
-                        <span class="tech-tag">Automation</span>
-                        <span class="tech-tag">Finance</span>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop" alt="Financial System">
+                    </div>
+                    <div class="project-content">
+                        <div>
+                            <p class="project-label">Invoice Processing & Reconciliation</p>
+                            <h3>Financial Automation System</h3>
+                            <p>Google Apps Script-based system automating invoice processing, reconciliation, and reporting. Reduced manual overhead by 120 hours/month.</p>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Google Apps Script</span>
+                            <span class="tech-tag">Google Sheets</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Finance</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Supply Chain CRM System</h3>
-                    <p>Full-Stack Business Application</p>
-                </div>
-                <div class="project-content">
-                    <p>Custom built full-stack CRM for supply chain operations with real-time dashboards, client management, and automated notifications. Serves 50+ internal users with 99.9% uptime.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">CRM</span>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" alt="CRM System">
+                    </div>
+                    <div class="project-content">
+                        <div>
+                            <p class="project-label">Full-Stack Business Application</p>
+                            <h3>Supply Chain CRM System</h3>
+                            <p>Custom built full-stack CRM for supply chain operations with real-time dashboards, client management, and automated notifications. Serves 50+ internal users with 99.9% uptime.</p>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">CRM</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Real-time Business Intelligence Dashboard</h3>
-                    <p>Analytics & Reporting Platform</p>
-                </div>
-                <div class="project-content">
-                    <p>Next.js + BigQuery dashboard providing real-time KPIs and executive analytics for decision making. Features automated reporting, data visualization, and custom metric calculations.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">BigQuery</span>
-                        <span class="tech-tag">Data Visualization</span>
-                        <span class="tech-tag">Analytics</span>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="BI Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <div>
+                            <p class="project-label">Analytics & Reporting Platform</p>
+                            <h3>Real-time Business Intelligence Dashboard</h3>
+                            <p>Next.js + BigQuery dashboard providing real-time KPIs and executive analytics. Features automated reporting, data visualization, and custom metric calculations for strategic decision-making.</p>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Data Visualization</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="container">
+        <div class="container contact-content">
             <h2 class="section-title">Get In Touch</h2>
-            <p style="max-width: 600px; margin: 0 auto 2rem; color: #b0b0b0;">Have a project in mind? Let's discuss how I can help automate and optimize your business processes.</p>
-            
+            <p class="section-subtitle">Have a project in mind? Let's discuss how I can help transform your business</p>
             <form class="contact-form" onsubmit="handleSubmit(event)">
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -657,14 +771,13 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="footer-content">
             <div class="social-links">
                 <a href="https://github.com/Sudarshan-Karn" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/sudarshan-karn" target="_blank">LinkedIn</a>
@@ -685,6 +798,20 @@
             const mailtoLink = `mailto:your.email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
             window.location.href = mailtoLink;
         }
+
+        // Fade in animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(el => observer.observe(el));
+        });
     </script>
 </body>
 </html>
