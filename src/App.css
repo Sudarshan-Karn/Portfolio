@@ -1,0 +1,112 @@
+.canvas {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.header p {
+  color: #6b7280;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.right {
+  position: relative;
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.pill-row span {
+  background: #eef2f7;
+  padding: 8px 14px;
+  border-radius: 20px;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.btn-row {
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.kpi {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kpi strong {
+  font-size: 26px;
+  color: #2563eb;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.project {
+  background: #f3f4f6;
+  padding: 28px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.chart-placeholder {
+  height: 140px;
+  background: linear-gradient(135deg,#c7d2fe,#e0e7ff);
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.skills-row span {
+  background: #eef2f7;
+  padding: 8px 14px;
+  border-radius: 18px;
+  margin: 6px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #2563eb;
+}
