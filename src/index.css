@@ -1,0 +1,14 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #e7ebf0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
