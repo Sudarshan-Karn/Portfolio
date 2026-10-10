@@ -251,10 +251,13 @@ nav {
   align-items: center;
   justify-content: center;
 }
+.orbit-system picture { display: contents; }
 .char-gif {
   width: 210px; height: 210px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 50% 20%;
+  background: radial-gradient(circle at 50% 35%, #ff9a55 0%, #f56b1e 55%, #a8400a 100%);
   z-index: 2;
   position: relative;
   box-shadow: 0 0 60px rgba(245,107,30,.25);
